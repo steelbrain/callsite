@@ -18,6 +18,8 @@ export function capture() {
       })
     }
   })
+  // Remove self from the stack
+  toReturn.shift()
 
   return toReturn
 }
