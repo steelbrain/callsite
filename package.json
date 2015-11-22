@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "Optimized stack traces for Javascript",
   "main": "lib/main.js",
-  "dependencies": {
+  "devdependencies": {
     "babel-preset-steelbrain": "^1.0.0"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "apm test"
+    "test": "apm test",
+    "compile": "ucompiler go"
   },
   "repository": {
     "type": "git",
