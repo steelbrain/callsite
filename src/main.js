@@ -13,8 +13,8 @@ export function capture() {
       toReturn.push({
         function: matches[1],
         file: matches[2],
-        line: matches[3],
-        col: matches[4]
+        line: parseInt(matches[3]) || 1,
+        col: parseInt(matches[4]) || 1
       })
     }
   })
