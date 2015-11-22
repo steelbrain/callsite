@@ -6,7 +6,7 @@ SB-Callsite is a node/javascript module to manipulate stack traces. You can use 
 #### API
 
 Installing UCompiler is easy, just execute this in a terminal
-```
+```js
 type Trace = shape(
   line: Number,
   col: Number,
