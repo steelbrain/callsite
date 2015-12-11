@@ -3,14 +3,20 @@
 const extractionRegex = /at (.*?) \((.*?):(\d+):(\d+)\)/
 
 export function capture() {
-  const toReturn = []
-  const stack = new Error().stack.split('\n')
+  const traces = fromStack(new Error().stack)
+  // Remove self from the stack
+  traces.shift()
+  return traces
+}
 
-  stack.shift()
-  stack.forEach(function(entry) {
+export function fromStack(stack) {
+  const stackChunks = stack.split('\n')
+  const traces = []
+
+  stackChunks.forEach(function(entry) {
     const matches = extractionRegex.exec(entry)
     if (matches !== null) {
-      toReturn.push({
+      traces.push({
         function: matches[1],
         file: matches[2],
         line: parseInt(matches[3]) || 1,
@@ -18,8 +24,6 @@ export function capture() {
       })
     }
   })
-  // Remove self from the stack
-  toReturn.shift()
 
-  return toReturn
+  return traces
 }
