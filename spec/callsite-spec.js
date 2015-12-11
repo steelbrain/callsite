@@ -8,7 +8,6 @@ describe('sb-callsite', function() {
 
     expect(stack[0].file).toBe(fixturePath)
     expect(stack[0].line).toBe(1)
-    expect(stack[0].col).toBe(97)
 
   })
 })
