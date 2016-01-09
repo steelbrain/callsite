@@ -1,3 +1,7 @@
+### 1.1.1
+
+ - Improve regexp capture speed
+
 ### 1.1.0
 
  - `fromStack` method implemented
