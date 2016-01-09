@@ -1,6 +1,6 @@
 'use babel'
 
-const extractionRegex = /at (.*?) \((.*?):(\d+):(\d+)\)/
+const extractionRegex = /at (\S+) \((\S+):(\d+):(\d+)\)/
 
 export function capture() {
   const traces = fromStack(new Error().stack)
