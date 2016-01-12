@@ -3,7 +3,7 @@ describe('sb-callsite', function() {
 
   it('works', function() {
 
-    const fixturePath = Path.join(__dirname, 'fixtures', 'test.js')
+    const fixturePath = Path.join(__dirname, 'fix tures', 'test.js')
     const stack = require(fixturePath)
 
     expect(stack[0].file).toBe(fixturePath)
