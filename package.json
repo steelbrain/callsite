@@ -4,7 +4,7 @@
   "description": "Optimized stack traces for Javascript",
   "main": "lib/main.js",
   "jsnext:main": "src/main.js",
-  "devdependencies": {
+  "devDependencies": {
     "babel-preset-steelbrain": "^1.0.0"
   },
   "scripts": {
