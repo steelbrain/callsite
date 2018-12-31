@@ -1,23 +1,18 @@
-describe('sb-callsite', function() {
-  const Path = require('path')
+import test from 'ava'
+import path from 'path'
 
-  it('works with spaces', function() {
+test('works with spaces', function(t) {
+  const fixturePath = path.join(__dirname, 'fix tures', 'test.js')
+  const stack = require(fixturePath)
 
-    const fixturePath = Path.join(__dirname, 'fix tures', 'test.js')
-    const stack = require(fixturePath)
+  t.is(stack[0].file, fixturePath)
+  t.is(stack[0].line, 1)
+})
 
-    expect(stack[0].file).toBe(fixturePath)
-    expect(stack[0].line).toBe(1)
+test('works without spaces', function(t) {
+  const fixturePath = path.join(__dirname, 'fixtures', 'test.js')
+  const stack = require(fixturePath)
 
-  })
-
-  it('works without spaces', function() {
-
-    const fixturePath = Path.join(__dirname, 'fixtures', 'test.js')
-    const stack = require(fixturePath)
-
-    expect(stack[0].file).toBe(fixturePath)
-    expect(stack[0].line).toBe(1)
-
-  })
+  t.is(stack[0].file, fixturePath)
+  t.is(stack[0].line, 1)
 })

@@ -1,5 +1,3 @@
-'use babel'
-
 const extractionRegex = /at (\S+) \(([\S ]+):(\d+):(\d+)\)/
 
 export function capture() {
@@ -20,7 +18,7 @@ export function fromStack(stack) {
         function: matches[1],
         file: matches[2],
         line: parseInt(matches[3]) || 1,
-        col: parseInt(matches[4]) || 1
+        col: parseInt(matches[4]) || 1,
       })
     }
   })
