@@ -1,7 +1,7 @@
 version: 2
 jobs:
   build_and_test:
-    working_directory: ~/fs
+    working_directory: ~/callsite
     docker:
       - image: node:10-jessie
     steps:
