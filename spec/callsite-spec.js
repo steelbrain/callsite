@@ -1,3 +1,5 @@
+/* eslint-disable global-require,import/no-dynamic-require */
+
 import test from 'ava'
 import path from 'path'
 
