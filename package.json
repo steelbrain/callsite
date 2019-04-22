@@ -9,7 +9,7 @@
     "@babel/preset-env": "^7.2.3",
     "ava": "^1.0.1",
     "eslint-config-steelbrain": "^7.0.0-beta1",
-    "sb-babel-cli": "^1.0.4"
+    "sb-babel-cli": "^2.0.0"
   },
   "scripts": {
     "test": "ava spec/*-spec.js",
